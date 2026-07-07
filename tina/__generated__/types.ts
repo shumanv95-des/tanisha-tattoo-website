@@ -311,6 +311,16 @@ export type SettingsSocialLinks = {
 
 export type Settings = Node & Document & {
   __typename?: 'Settings';
+  heroImage?: Maybe<Scalars['String']['output']>;
+  heroTitle?: Maybe<Scalars['String']['output']>;
+  heroSubtitle1?: Maybe<Scalars['String']['output']>;
+  heroSubtitle2?: Maybe<Scalars['String']['output']>;
+  introLabel?: Maybe<Scalars['String']['output']>;
+  introTitle?: Maybe<Scalars['String']['output']>;
+  introDescription?: Maybe<Scalars['String']['output']>;
+  contactEmail?: Maybe<Scalars['String']['output']>;
+  contactLocation?: Maybe<Scalars['String']['output']>;
+  contactAvailability?: Maybe<Scalars['String']['output']>;
   socialLinks?: Maybe<Array<Maybe<SettingsSocialLinks>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -325,6 +335,16 @@ export type SettingsSocialLinksFilter = {
 };
 
 export type SettingsFilter = {
+  heroImage?: InputMaybe<ImageFilter>;
+  heroTitle?: InputMaybe<StringFilter>;
+  heroSubtitle1?: InputMaybe<StringFilter>;
+  heroSubtitle2?: InputMaybe<StringFilter>;
+  introLabel?: InputMaybe<StringFilter>;
+  introTitle?: InputMaybe<StringFilter>;
+  introDescription?: InputMaybe<StringFilter>;
+  contactEmail?: InputMaybe<StringFilter>;
+  contactLocation?: InputMaybe<StringFilter>;
+  contactAvailability?: InputMaybe<StringFilter>;
   socialLinks?: InputMaybe<SettingsSocialLinksFilter>;
 };
 
@@ -471,6 +491,16 @@ export type SettingsSocialLinksMutation = {
 };
 
 export type SettingsMutation = {
+  heroImage?: InputMaybe<Scalars['String']['input']>;
+  heroTitle?: InputMaybe<Scalars['String']['input']>;
+  heroSubtitle1?: InputMaybe<Scalars['String']['input']>;
+  heroSubtitle2?: InputMaybe<Scalars['String']['input']>;
+  introLabel?: InputMaybe<Scalars['String']['input']>;
+  introTitle?: InputMaybe<Scalars['String']['input']>;
+  introDescription?: InputMaybe<Scalars['String']['input']>;
+  contactEmail?: InputMaybe<Scalars['String']['input']>;
+  contactLocation?: InputMaybe<Scalars['String']['input']>;
+  contactAvailability?: InputMaybe<Scalars['String']['input']>;
   socialLinks?: InputMaybe<Array<InputMaybe<SettingsSocialLinksMutation>>>;
 };
 
@@ -478,7 +508,7 @@ export type ProjectPartsFragment = { __typename: 'Project', title: string, categ
 
 export type ServicesPartsFragment = { __typename: 'Services', services?: Array<{ __typename: 'ServicesServices', id?: string | null, title?: string | null, description?: string | null, items?: Array<{ __typename: 'ServicesServicesItems', id?: string | null, name?: string | null } | null> | null } | null> | null };
 
-export type SettingsPartsFragment = { __typename: 'Settings', socialLinks?: Array<{ __typename: 'SettingsSocialLinks', name?: string | null, url?: string | null, label?: string | null, icon?: string | null } | null> | null };
+export type SettingsPartsFragment = { __typename: 'Settings', heroImage?: string | null, heroTitle?: string | null, heroSubtitle1?: string | null, heroSubtitle2?: string | null, introLabel?: string | null, introTitle?: string | null, introDescription?: string | null, contactEmail?: string | null, contactLocation?: string | null, contactAvailability?: string | null, socialLinks?: Array<{ __typename: 'SettingsSocialLinks', name?: string | null, url?: string | null, label?: string | null, icon?: string | null } | null> | null };
 
 export type ProjectQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -523,7 +553,7 @@ export type SettingsQueryVariables = Exact<{
 }>;
 
 
-export type SettingsQuery = { __typename?: 'Query', settings: { __typename: 'Settings', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, socialLinks?: Array<{ __typename: 'SettingsSocialLinks', name?: string | null, url?: string | null, label?: string | null, icon?: string | null } | null> | null } };
+export type SettingsQuery = { __typename?: 'Query', settings: { __typename: 'Settings', id: string, heroImage?: string | null, heroTitle?: string | null, heroSubtitle1?: string | null, heroSubtitle2?: string | null, introLabel?: string | null, introTitle?: string | null, introDescription?: string | null, contactEmail?: string | null, contactLocation?: string | null, contactAvailability?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, socialLinks?: Array<{ __typename: 'SettingsSocialLinks', name?: string | null, url?: string | null, label?: string | null, icon?: string | null } | null> | null } };
 
 export type SettingsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -535,7 +565,7 @@ export type SettingsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type SettingsConnectionQuery = { __typename?: 'Query', settingsConnection: { __typename?: 'SettingsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SettingsConnectionEdges', cursor: string, node?: { __typename: 'Settings', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, socialLinks?: Array<{ __typename: 'SettingsSocialLinks', name?: string | null, url?: string | null, label?: string | null, icon?: string | null } | null> | null } | null } | null> | null } };
+export type SettingsConnectionQuery = { __typename?: 'Query', settingsConnection: { __typename?: 'SettingsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SettingsConnectionEdges', cursor: string, node?: { __typename: 'Settings', id: string, heroImage?: string | null, heroTitle?: string | null, heroSubtitle1?: string | null, heroSubtitle2?: string | null, introLabel?: string | null, introTitle?: string | null, introDescription?: string | null, contactEmail?: string | null, contactLocation?: string | null, contactAvailability?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, socialLinks?: Array<{ __typename: 'SettingsSocialLinks', name?: string | null, url?: string | null, label?: string | null, icon?: string | null } | null> | null } | null } | null> | null } };
 
 export const ProjectPartsFragmentDoc = gql`
     fragment ProjectParts on Project {
@@ -567,6 +597,16 @@ export const ServicesPartsFragmentDoc = gql`
 export const SettingsPartsFragmentDoc = gql`
     fragment SettingsParts on Settings {
   __typename
+  heroImage
+  heroTitle
+  heroSubtitle1
+  heroSubtitle2
+  introLabel
+  introTitle
+  introDescription
+  contactEmail
+  contactLocation
+  contactAvailability
   socialLinks {
     __typename
     name
@@ -815,7 +855,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "http://localhost:4001/graphql",
+        url: "https://content.tinajs.io/2.4/content/dummy/github/main",
         queries,
       })
     )

@@ -193,6 +193,16 @@ type SettingsSocialLinks {
 }
 
 type Settings implements Node & Document {
+  heroImage: String
+  heroTitle: String
+  heroSubtitle1: String
+  heroSubtitle2: String
+  introLabel: String
+  introTitle: String
+  introDescription: String
+  contactEmail: String
+  contactLocation: String
+  contactAvailability: String
   socialLinks: [SettingsSocialLinks]
   id: ID!
   _sys: SystemInfo!
@@ -207,6 +217,16 @@ input SettingsSocialLinksFilter {
 }
 
 input SettingsFilter {
+  heroImage: ImageFilter
+  heroTitle: StringFilter
+  heroSubtitle1: StringFilter
+  heroSubtitle2: StringFilter
+  introLabel: StringFilter
+  introTitle: StringFilter
+  introDescription: StringFilter
+  contactEmail: StringFilter
+  contactLocation: StringFilter
+  contactAvailability: StringFilter
   socialLinks: SettingsSocialLinksFilter
 }
 
@@ -281,6 +301,16 @@ input SettingsSocialLinksMutation {
 }
 
 input SettingsMutation {
+  heroImage: String
+  heroTitle: String
+  heroSubtitle1: String
+  heroSubtitle2: String
+  introLabel: String
+  introTitle: String
+  introDescription: String
+  contactEmail: String
+  contactLocation: String
+  contactAvailability: String
   socialLinks: [SettingsSocialLinksMutation]
 }
 

@@ -25,6 +25,16 @@ fragment ServicesParts on Services {
 
 fragment SettingsParts on Settings {
   __typename
+  heroImage
+  heroTitle
+  heroSubtitle1
+  heroSubtitle2
+  introLabel
+  introTitle
+  introDescription
+  contactEmail
+  contactLocation
+  contactAvailability
   socialLinks {
     __typename
     name

@@ -161,6 +161,62 @@ export default defineConfig({
         },
         fields: [
           {
+            type: "image",
+            name: "heroImage",
+            label: "Hero Background Image",
+          },
+          {
+            type: "string",
+            name: "heroTitle",
+            label: "Hero Title",
+          },
+          {
+            type: "string",
+            name: "heroSubtitle1",
+            label: "Hero Subtitle 1",
+          },
+          {
+            type: "string",
+            name: "heroSubtitle2",
+            label: "Hero Subtitle 2",
+          },
+          {
+            type: "string",
+            name: "introLabel",
+            label: "Intro Section Label",
+          },
+          {
+            type: "string",
+            name: "introTitle",
+            label: "Intro Main Title Text",
+            ui: {
+              component: "textarea",
+            },
+          },
+          {
+            type: "string",
+            name: "introDescription",
+            label: "Intro Description Paragraph",
+            ui: {
+              component: "textarea",
+            },
+          },
+          {
+            type: "string",
+            name: "contactEmail",
+            label: "Contact Email",
+          },
+          {
+            type: "string",
+            name: "contactLocation",
+            label: "Contact Location (Studio)",
+          },
+          {
+            type: "string",
+            name: "contactAvailability",
+            label: "Contact Availability Booking Info",
+          },
+          {
             type: "object",
             name: "socialLinks",
             label: "Social Links",

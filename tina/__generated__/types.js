@@ -35,6 +35,16 @@ export const ServicesPartsFragmentDoc = gql`
 export const SettingsPartsFragmentDoc = gql`
     fragment SettingsParts on Settings {
   __typename
+  heroImage
+  heroTitle
+  heroSubtitle1
+  heroSubtitle2
+  introLabel
+  introTitle
+  introDescription
+  contactEmail
+  contactLocation
+  contactAvailability
   socialLinks {
     __typename
     name
@@ -257,7 +267,7 @@ const generateRequester = (client) => {
 export const ExperimentalGetTinaClient = () => getSdk(
   generateRequester(
     createClient({
-      url: "http://localhost:4001/graphql",
+      url: "https://content.tinajs.io/2.4/content/dummy/github/main",
       queries
     })
   )
