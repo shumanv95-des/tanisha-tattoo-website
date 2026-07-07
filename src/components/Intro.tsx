@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { SETTINGS_DATA } from "../data";
 import { ArrowRight } from "lucide-react";
 
 export default function Intro() {
@@ -23,7 +24,7 @@ export default function Intro() {
             className="text-brand-red font-mono text-xs tracking-widest uppercase flex items-center space-x-2"
           >
             <span>//</span>
-            <span>Про мене</span>
+            <span>{SETTINGS_DATA.introLabel}</span>
           </motion.div>
         </div>
 
@@ -36,22 +37,10 @@ export default function Intro() {
             transition={{ duration: 1, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.2] text-white font-sans text-left"
           >
-            Я пристрасна{" "}
-            <span className="text-brand-red font-semibold transition-colors duration-300">
-              тату-майстриня
-            </span>,{" "}
-            яка разом з{" "}
-            <span className="text-brand-red font-semibold transition-colors duration-300">
-              вами
-            </span>{" "}
-            створює{" "}
-            <span className="text-brand-red font-semibold transition-colors duration-300">
-              вічне мистецтво на тілі
-            </span>
-            . Мій фокус — вишукані деталі, абсолютна стерильність та сміливе самовираження.
+            {SETTINGS_DATA.introTitle}
           </motion.h2>
         </div>
-
+ 
         {/* Right Column: Mini description & CTA button */}
         <div className="lg:col-span-3 flex flex-col justify-between space-y-8 lg:space-y-0 lg:pl-4">
           <motion.p
@@ -61,7 +50,7 @@ export default function Intro() {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-sm md:text-[0.9rem] text-white/60 leading-relaxed font-sans text-left"
           >
-            Втілюю ваші творчі бачення з пристрастю та бездоганним виконанням — будь то авторські рукави, витончений мінімалізм чи деталізований реалізм. Ми тісно співпрацюємо від першого начерку до повного загоєння.
+            {SETTINGS_DATA.introDescription}
           </motion.p>
 
           <motion.div

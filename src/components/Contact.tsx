@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Mail, MapPin, Calendar } from "lucide-react";
+import { SETTINGS_DATA } from "../data";
 
 export default function Contact() {
   return (
@@ -53,8 +54,8 @@ export default function Contact() {
                   Для пропозицій сеансів, референсів та консультацій щодо ескізів.
                 </p>
               </div>
-              <a href="mailto:tanisha@tattoostudio.art" className="text-base font-semibold hover:text-brand-red transition-colors mt-auto block">
-                tanisha@tattoostudio.art
+              <a href={`mailto:${SETTINGS_DATA.contactEmail}`} className="text-base font-semibold hover:text-brand-red transition-colors mt-auto block">
+                {SETTINGS_DATA.contactEmail}
               </a>
             </div>
 
@@ -67,7 +68,7 @@ export default function Contact() {
                 </p>
               </div>
               <span className="text-base font-semibold text-white/80 mt-auto block">
-                Київ, Україна
+                {SETTINGS_DATA.contactLocation}
               </span>
             </div>
 
@@ -80,7 +81,7 @@ export default function Contact() {
                 </p>
               </div>
               <span className="text-base font-semibold text-white/80 mt-auto block">
-                Запис на наступний місяць
+                {SETTINGS_DATA.contactAvailability}
               </span>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { SOCIAL_LINKS } from "../data";
+import { SOCIAL_LINKS, SETTINGS_DATA } from "../data";
 import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <img
-          src="/Gemini_Generated_Image_9615219615219615.png"
+          src={SETTINGS_DATA.heroImage}
           alt="Tattoo Background"
           className="w-full h-full object-cover transition-transform duration-1000 ease-out"
           style={{ opacity: scrollOpacity }}
@@ -56,7 +56,7 @@ export default function Hero() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-[12vw] sm:text-[11vw] md:text-[10vw] font-extrabold tracking-tighter leading-[0.85] text-white font-sans text-left relative z-10 uppercase"
             >
-              TANISHA TATTOO
+              {SETTINGS_DATA.heroTitle}
             </motion.h1>
           </div>
 
@@ -95,8 +95,8 @@ export default function Hero() {
             >
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight font-sans">
                 <span className="text-brand-red font-mono font-medium mr-2">//</span>
-                <span className="text-white">Тату-майстер</span>
-                <div className="text-white/90">Авторські ескізи</div>
+                <span className="text-white">{SETTINGS_DATA.heroSubtitle1}</span>
+                <div className="text-white/90">{SETTINGS_DATA.heroSubtitle2}</div>
               </div>
             </motion.div>
           </div>
