@@ -3,6 +3,7 @@ import settingsData from "../content/settings.json";
 import servicesData from "../content/services.json";
 
 // Dynamic type cast for loaded singletons
+export const SETTINGS_DATA = settingsData;
 export const SOCIAL_LINKS: SocialLink[] = settingsData.socialLinks as SocialLink[];
 export const SERVICES_DATA: ServiceCategory[] = servicesData.services as ServiceCategory[];
 
