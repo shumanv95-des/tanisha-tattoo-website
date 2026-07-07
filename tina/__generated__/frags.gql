@@ -1,0 +1,35 @@
+fragment ProjectParts on Project {
+  __typename
+  title
+  category
+  year
+  description
+  tags
+  imageUrl
+}
+
+fragment ServicesParts on Services {
+  __typename
+  services {
+    __typename
+    id
+    title
+    description
+    items {
+      __typename
+      id
+      name
+    }
+  }
+}
+
+fragment SettingsParts on Settings {
+  __typename
+  socialLinks {
+    __typename
+    name
+    url
+    label
+    icon
+  }
+}
