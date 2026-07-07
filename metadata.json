@@ -1,0 +1,6 @@
+{
+  "name": "Tanisha Tattoo Portfolio",
+  "description": "A sleek, minimalist dark portfolio for professional custom tattoo artist Tanisha Tattoo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
